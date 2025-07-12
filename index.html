@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muhammad Kamal – Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Muhammad Kamal</h1>
+      <p>BBA Student | Graphic Designer | Web Developer</p>
+      <p class="tagline">Turning ideas into results through creativity and consistency.</p>
+    </div>
+  </header>
+
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I am a BBA student at the University of Sargodha with a passion for event planning, digital design, and web development. My skills span across graphic design, bookkeeping, digital marketing, and front-end development.</p>
+  </section>
+
+<section class="skills">
+  <h2>Skills</h2>
+
+  <div class="skill-bars">
+    <div class="skill">
+      <span>HTML</span>
+      <div class="bar"><div class="level html"></div></div>
+    </div>
+    <div class="skill">
+      <span>CSS</span>
+      <div class="bar"><div class="level css"></div></div>
+    </div>
+    <div class="skill">
+      <span>JavaScript</span>
+      <div class="bar"><div class="level js"></div></div>
+    </div>
+    <div class="skill">
+      <span>Bookkeeping</span>
+      <div class="bar"><div class="level bookkeeping"></div></div>
+    </div>
+  </div>
+
+  <div class="skill-icons">
+    <img src="assets/icons/seo.png" alt="SEO" title="SEO">
+    <img src="assets/icons/excel.png" alt="Excel" title="Excel">
+    <img src="assets/icons/canva.png" alt="Canva" title="Canva">
+    <img src="assets/icons/figma.png" alt="Figma" title="Figma">
+  </div>
+</section>
+
+<section class="projects">
+  <h2>Projects</h2>
+  <div class="project-grid">
+
+    <div class="project-card">
+      <img src="assets/images/project1.png" alt="Project 1">
+      <div class="project-info">
+        <h3>Landing Page</h3>
+        <p>A modern responsive landing page built using HTML, CSS, and Flexbox.</p>
+        <a href="https://your-live-demo-link.com" target="_blank">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/images/project2.png" alt="Project 2">
+      <div class="project-info">
+        <h3>Portfolio Website</h3>
+        <p>Personal portfolio showcasing projects, skills, and certifications.</p>
+        <a href="https://your-live-demo-link.com" target="_blank">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/images/project3.png" alt="Project 3">
+      <div class="project-info">
+        <h3>Bookkeeping Dashboard</h3>
+        <p>A bookkeeping UI prototype designed in Figma with Excel reports.</p>
+        <a href="https://your-live-demo-link.com" target="_blank">View Project</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="timeline">
+  <h2>Experience & Education</h2>
+
+  <div class="timeline-container">
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Volunteer Event Planner – Lincoln Corner Sargodha</h3>
+        <span>2024 – Present</span>
+        <p>Organized weekly cultural and educational events, promoted cross-cultural understanding, and coordinated interactive learning activities for youth engagement.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Event Team Member – 2nd Annual CEO Forum, MFK-NBS</h3>
+        <span>2024</span>
+        <p>Collaborated on planning, logistics, and guest coordination for a large-scale entrepreneurship event featuring CEOs and business leaders.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>BBA – University of Sargodha</h3>
+        <span>2022 – Present</span>
+        <p>Pursuing a Bachelor’s in Business Administration with coursework in Accounting, Marketing, Financial Management, and IT.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="certifications">
+  <h2>Certifications</h2>
+
+  <div class="cert-grid" id="certGrid">
+    <!-- TOP 6 CERTIFICATES -->
+    <div class="cert-card">
+      <h3>Google Digital Marketing</h3>
+      <p>Google/Coursera</p>
+    </div>
+    <div class="cert-card">
+      <h3>Excel Skills for Business</h3>
+      <p>Macquarie University / Coursera</p>
+    </div>
+    <div class="cert-card">
+      <h3>HTML, CSS & JavaScript for Web Developers</h3>
+      <p>Johns Hopkins / Coursera</p>
+    </div>
+    <div class="cert-card">
+      <h3>Bookkeeping Basics</h3>
+      <p>Intuit / Coursera</p>
+    </div>
+    <div class="cert-card">
+      <h3>Canva Graphic Design</h3>
+      <p>Coursera Project Network</p>
+    </div>
+    <div class="cert-card">
+      <h3>SEO Fundamentals</h3>
+      <p>UC Davis / Coursera</p>
+    </div>
+
+    <!-- HIDDEN CERTIFICATES -->
+    <div class="cert-card hidden">
+      <h3>Python for Everybody</h3>
+      <p>University of Michigan</p>
+    </div>
+    <div class="cert-card hidden">
+      <h3>Introduction to Financial Accounting</h3>
+      <p>Wharton / Coursera</p>
+    </div>
+    <div class="cert-card hidden">
+      <h3>Basics of Digital Marketing</h3>
+      <p>University of Illinois</p>
+    </div>
+    <div class="cert-card hidden">
+      <h3>Responsive Web Design</h3>
+      <p>Coursera Project Network</p>
+    </div>
+    <!-- Add more as needed -->
+  </div>
+
+  <div class="show-more-container">
+    <button id="showMoreBtn">Show More</button>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Contact Me</h2>
+  <p>Feel free to reach out for collaborations, internships, or freelance projects!</p>
+
+  <div class="contact-info">
+    <p><strong>Email:</strong> <a href="mailto:kamal@example.com">kamal@example.com</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/923001234567" target="_blank">+92 300 1234567</a></p>
+    <div class="social-icons">
+      <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <img src="assets/icons/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/yourusername" target="_blank">
+        <img src="assets/icons/github.png" alt="GitHub">
+      </a>
+      <a href="https://www.instagram.com/yourusername/" target="_blank">
+        <img src="assets/icons/instagram.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Muhammad Kamal. All rights reserved.</p>
+</footer>
+
+
+  <!-- Skills, Projects, Experience, Certifications, and Footer will follow -->
+<script defer src="script.js"></script>
+</body>
+</html>
