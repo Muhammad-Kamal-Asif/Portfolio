@@ -4,9 +4,8 @@ document.getElementById("showMoreBtn").addEventListener("click", function () {
   this.style.display = "none"; // hide the button
 });
 
-<script>
-  function toggleMenu() {
-    const nav = document.querySelector('nav ul');
-    nav.classList.toggle('show');
-  }
-</script>
+
+function toggleMenu() {
+  const nav = document.querySelector('nav ul');
+  nav.classList.toggle('show');
+};
