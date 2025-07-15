@@ -3,9 +3,3 @@ document.getElementById("showMoreBtn").addEventListener("click", function () {
   hiddenCards.forEach(card => card.classList.remove("hidden"));
   this.style.display = "none"; // hide the button
 });
-
-
-function toggleMenu() {
-  const nav = document.querySelector('nav ul');
-  nav.classList.toggle('show');
-};
