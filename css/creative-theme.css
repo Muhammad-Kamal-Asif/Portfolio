@@ -1,0 +1,362 @@
+/* Updated CSS: Soft Creative Minimal Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  background-color: #fcfaf9;
+  color: #1f1f1f;
+  line-height: 1.6;
+}
+
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 1.2rem 2rem;
+  position: static;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #1f1f1f;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  background-color: #ff6f61;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.hero {
+  background: linear-gradient(to right, #ff6f61, #6ccff6);
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem;
+  border-radius: 0 0 50px 50px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #fdfdfd;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  color: #ff6f61;
+  margin-bottom: 0.5rem;
+}
+
+.button {
+  background: #ff6f61;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #e65c50;
+}
+
+footer {
+  background: #1f1f1f;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  nav a {
+    margin: 0 0.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* creative-theme.css - Bright and Creative Theme */
+
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Quicksand:wght@400;600&display=swap');
+
+:root {
+  --primary: #FF6B6B;
+  --secondary: #FFD93D;
+  --accent: #6BCB77;
+  --background: #FFFBE7;
+  --text: #222;
+  --heading: #1F2937;
+  --card-bg: #ffffff;
+  --border-radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header.hero {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-content img.c-avatar__img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+  color: var(--heading);
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
+  margin-top: 8px;
+}
+
+.skill-bars .bar {
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.skill-bars .level {
+  height: 14px;
+  background: var(--accent);
+  width: 80%; /* Customize as needed */
+  animation: fillBar 1.8s ease-in-out forwards;
+}
+
+@keyframes fillBar {
+  0% { width: 0; }
+  100% { width: 80%; }
+}
+
+.skill-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-icons img {
+  width: 50px;
+  margin: 8px;
+  transition: transform 0.3s;
+}
+
+.skill-icons img:hover {
+  transform: scale(1.2);
+}
+
+.project-card, .cert-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+    margin: 1rem;
+}
+
+.project-card:hover, .cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img, .cert-card img {
+  width: 100%;
+  display: block;
+}
+
+.project-info, .cert-card {
+  padding: 20px;
+}
+
+.timeline-item::before {
+  background: var(--primary);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--primary);
+  color: white;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ################## */
+/* Mine Improvements: */
+/* ################## */
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  /* filter: brightness(100) invert(1); */
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.certifications {
+  margin: 10px auto;
+  padding: 0 20px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 5px;
+}
+
+.show-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#showMoreBtn {
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact {
+  max-width: 800px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.contact h2::after {
+    margin: 10px auto;
+}
+
+.timeline-container {
+    margin: 1rem;
+}
+
+.about p {
+  text-align: justify;
+  text-justify: inter-word;
+}
