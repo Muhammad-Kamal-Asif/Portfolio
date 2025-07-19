@@ -23,7 +23,7 @@
 </head>
 <body>
     
-    <header class="hero">
+  <header class="hero">
     <nav class="nav">
       <a href="./../index.html" class="nav-item" active-color="orange">Home</a>
       <a href="./about.html" class="nav-item" active-color="green">About</a>
@@ -34,13 +34,49 @@
       <span class="nav-indicator"></span>
     </nav>
 
-        <div class="hero-content">
-            <img class="c-avatar__img" src="./../assets/images/Profile Picture.png" alt="Profile Image">
-            <h1>Muhammad Kamal</h1>
-            <p>BBA Student | Graphic Designer | Bookkeeper | Frontend Developer</p>
-            <p class="tagline">Turning ideas into results through creativity and consistency.</p>
-        </div>
-    </header>
+    <!-- =============================== -->
+    <!-- ===== Cerification add up ===== -->
+    <!-- =============================== -->
+
+    <h1>📜 My Certifications</h1>
+    <p>Explore my learning journey across diverse platforms</p>
+  </header>
+
+  <section class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="coursera">Coursera</button>
+    <button class="filter-btn" data-filter="digiskills">DigiSkills</button>
+    <button class="filter-btn" data-filter="participation">Participation</button>
+    <button class="filter-btn" data-filter="achievement">Achievements</button>
+  </section>
+
+    <section class="certificate-gallery">
+    <!-- EXAMPLE CERTIFICATE CARD -->
+    <div class="cert-card coursera">
+      <img src="certificates/coursera1.jpg" alt="Coursera Certificate">
+    </div>
+    <div class="cert-card digiskills">
+      <img src="certificates/digiskills1.jpg" alt="DigiSkills Certificate">
+    </div>
+    <div class="cert-card participation">
+      <img src="certificates/event1.jpg" alt="Participation Certificate">
+    </div>
+    <div class="cert-card achievement">
+      <img src="certificates/award1.jpg" alt="Achievement Certificate">
+    </div>
+
+    <!-- Add more certs as needed -->
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <!-- ==================== -->
+  <!-- ===== End Here ===== -->
+  <!-- ==================== -->
 
     <!-- certificates -->
 <section class="certifications">

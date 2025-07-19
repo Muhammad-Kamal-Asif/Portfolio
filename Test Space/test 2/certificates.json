@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Excel Skills for Business",
+    "issuer": "Coursera · Macquarie University",
+    "category": "Coursera",
+    "image": "./../Portfolio/assets/Certificates Images/Coursera 6EPK6PCB6PUV.jpg"
+  },
+  {
+    "title": "Freelancing Skills",
+    "issuer": "DigiSkills.pk",
+    "category": "DigiSkills",
+    "image": "./Certificates Images/Coursera 25VY8QWLTXMF.jpg"
+  },
+  {
+    "title": "Leadership Workshop",
+    "issuer": "Lincoln Corner",
+    "category": "Participation",
+    "image": "certificates/leadership-workshop.jpg"
+  }
+  // Add more objects here
+]

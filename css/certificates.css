@@ -1,0 +1,48 @@
+/* ================== */
+/* Certificate header */
+/* ================== */
+
+.cert-header {
+  text-align: center;
+  padding: 2.5rem 1rem 1rem;
+  background: linear-gradient(135deg, #fdfcfb, #e2f1ff); /* soft blue */
+  color: #222;
+  border-bottom: 2px solid #f1f1f1;
+}
+.cert-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.cert-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+
+/* ========================== */
+/* ===== FILTER BUTTONS ===== */
+/* ========================== */
+
+.filter-buttons {
+  text-align: center;
+  padding: 1rem;
+}
+.filter-btn {
+  background-color: #ff8c42;
+  border: none;
+  color: white;
+  margin: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #e26a28;
+}
+
+/* ==================== */
+/* ===== Nav Bar ====== */
+/* ==================== */

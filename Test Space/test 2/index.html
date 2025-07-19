@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Certificates</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+
+  <!-- Header with Wave -->
+  <header class="cert-header">
+    <h1>📜 My Certifications</h1>
+    <p>Explore my learning journey across diverse platforms</p>
+  </header>
+
+  <!-- Filter Buttons -->
+  <section class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="coursera">Coursera</button>
+    <button class="filter-btn" data-filter="digiskills">DigiSkills</button>
+    <button class="filter-btn" data-filter="participation">Participation</button>
+    <button class="filter-btn" data-filter="achievement">Achievements</button>
+  </section>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search certificates by title...">
+  </div>
+<section class="certificate-gallery">
+<!-- Certificates Grid -->
+<div class="gallery" id="gallery"></div>
+
+    <!-- Sample Card 1 -->
+    <div class="cert-card" data-category="Coursera" data-title="Excel Skills for Business">
+      <img src="./Certificates Images/Coursera 5LX5JMBCZEKJ.jpg" alt="Excel Certificate" />
+      <div class="info">
+        <h3>Excel Skills for Business</h3>
+        <p>Coursera · Macquarie University</p>
+        <a href="./Certificates Images/Coursera 5LX5JMBCZEKJ.jpg" download class="download">Download</a>
+      </div>
+    </div>
+
+    <!-- Sample Card 2 -->
+    <div class="cert-card" data-category="DigiSkills" data-title="Freelancing Skills">
+      <img src="./Certificates Images/Coursera 25VY8QWLTXMF.jpg" alt="Freelancing Certificate" />
+      <div class="info">
+        <h3>Freelancing Skills</h3>
+        <p>DigiSkills.pk</p>
+        <a href="./Certificates Images/Coursera 25VY8QWLTXMF.jpg" download class="download">Download</a>
+      </div>
+    </div>
+
+    <!-- Add more cards as needed with correct categories & titles -->
+  </div>
+</section>
+  <!-- Modal Lightbox -->
+  <div class="modal" id="modal">
+    <img id="modalImage" src="" alt="Certificate Preview" />
+  </div>
+
+  <!-- Back to Top -->
+  <div id="backToTop" title="Back to top">↑</div>
+
+<button id="printBtn" class="print-button">🖨️ Print / Export PDF</button>
+
+    <footer>
+        <p>© 2025 Muhammad Kamal. All rights reserved.</p>
+    </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
