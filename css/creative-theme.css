@@ -276,7 +276,7 @@ section h2::after {
 }
 
 .project-card:hover, .cert-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.02);
 }
 
 .project-card img, .cert-card img {
