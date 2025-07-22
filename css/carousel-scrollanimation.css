@@ -1,0 +1,53 @@
+/* === Carousel === */
+    .carousel-container {
+      position: relative;
+      max-width: 800px;
+      margin: 50px auto;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel img {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .carousel-buttons {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .carousel-buttons button {
+      background-color: #FF7043;
+      color: white;
+      border: none;
+      margin: 0 5px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* === Scroll Animations === */
+    .scroll-effect {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+
+    .scroll-effect.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .fade-in { transform: translateY(20px); }
+    .slide-in-left { transform: translateX(-50px); }
+    .slide-in-right { transform: translateX(50px); }
+    .slide-up { transform: translateY(50px); }
