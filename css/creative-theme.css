@@ -241,13 +241,20 @@ section h2::after {
 .skill-bars .level {
   height: 14px;
   background: var(--accent);
-  width: 80%; /* Customize as needed */
   animation: fillBar 1.8s ease-in-out forwards;
 }
 
+.level.bookkeeping { --final-width: 80%; }
+.level.graphic-designing { --final-width: 95%; }
+.level.frontend { --final-width: 70%; }
+.level.ms-excel { --final-width: 85%; }
+.level.digital-marketing { --final-width: 73%; }
+.level.seo { --final-width: 70%; }
+.level.research-review-academic-writing { --final-width: 90%; }
+
 @keyframes fillBar {
   0% { width: 0; }
-  100% { width: 80%; }
+  100% { width: var(--final-width); }
 }
 
 .skill-icons {
@@ -373,4 +380,35 @@ a:hover {
 .about p {
   text-align: justify;
   text-justify: inter-word;
+}
+
+.timeline-container {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #FF7043;
+}
+
+/* .timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+} */
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #FF7043;
+  border-radius: 50%;
+  position: absolute;
+  left: -20px;
+  top: 7px;
+}
+
+.timeline-content span {
+  display: block;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.timeline-content p {
+  line-height: 1.6;
 }
