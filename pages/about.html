@@ -41,105 +41,139 @@
 
 <section class="about-intro">
   <h2 class="scroll-effect fade-in">My Story</h2>
-  <p class="scroll-effect slide-in-left" style="text-align: justify;">Hi! I’m Muhammad Kamal, a passionate BBA student with a heart in community building and a mind in creativity and data. I’ve always believed in merging purpose with performance — that’s what led me to graphic design, bookkeeping, and front-end development.</p>
+  <p class="scroll-effect slide-in-right" style="text-align: justify;">Hi! I’m Muhammad Kamal, a passionate BBA student with a heart in community building and a mind in creativity and data. I’ve always believed in merging purpose with performance — that’s what led me to graphic design, bookkeeping, and front-end development.</p>
   <p class="scroll-effect slide-in-right" style="text-align: justify;">From managing real events at Lincoln Corner to building UI prototypes and editing cultural videos, I’ve had the chance to wear multiple hats — and I enjoy it. Learning by doing has been my way to grow, with over 50 certifications supporting this journey.</p>
-  <p class="scroll-effect slide-in-left" style="text-align: justify;">Now, I’m looking forward to contributing to organizations where I can blend my creativity, analytical thinking, and business acumen to create meaningful impact.</p>
+  <p class="scroll-effect slide-in-right" style="text-align: justify;">Now, I’m looking forward to contributing to organizations where I can blend my creativity, analytical thinking, and business acumen to create meaningful impact.</p>
 </section>
 
 
+<!-- === Photo Gallery Section === -->
 <section class="photo-gallery">
   <h2 class="scroll-effect fade-in">Journey in Pictures</h2>
+  <p class="gallery-intro scroll-effect fade-in">
+    A glimpse into my academic life, community contributions, and creative projects.
+  </p>
 
-  <h3>🎓 Student Life</h3>
-  <div class="gallery-row">
-    <img src="#" alt="University Class">
-    <img src="assets/gallery/education2.jpg" alt="Presenting in Class">
+  <!-- Student Life -->
+  <div class="gallery-category">
+    <h3 class="scroll-effect slide-up">🎓 Student Life</h3>
+    <div class="gallery-grid">
+      <figure>
+        <img src="assets/gallery/education1.jpg" alt="University Class">
+        <figcaption>Engaged in University Discussions</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gallery/education2.jpg" alt="Presenting in Class">
+        <figcaption>Delivering a Class Presentation</figcaption>
+      </figure>
+    </div>
   </div>
 
-  <h3>🌍 Community Impact – Lincoln Corner</h3>
-  <div class="gallery-row">
-    <img src="assets/gallery/lincoln1.jpg" alt="Event Planning">
-    <img src="assets/gallery/lincoln2.jpg" alt="Session on EI">
-    <img src="assets/gallery/lincoln3.jpg" alt="Cultural Exchange Activity">
+  <!-- Lincoln Corner -->
+  <div class="gallery-category">
+    <h3 class="scroll-effect slide-up">🌍 Community Impact – Lincoln Corner</h3>
+    <div class="gallery-grid">
+      <figure>
+        <img src="assets/gallery/lincoln1.jpg" alt="Event Planning">
+        <figcaption>Planning an Engagement Session</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gallery/lincoln2.jpg" alt="Session on EI">
+        <figcaption>Session on Emotional Intelligence</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gallery/lincoln3.jpg" alt="Cultural Exchange Activity">
+        <figcaption>Cultural Exchange Activity</figcaption>
+      </figure>
+    </div>
   </div>
 
-  <h3>💡 Creative Projects</h3>
-  <div class="gallery-row">
-    <img src="assets/gallery/design1.jpg" alt="Poster Design">
-    <img src="assets/gallery/dev1.jpg" alt="Portfolio Website">
+  <!-- Creative Work -->
+  <div class="gallery-category">
+    <h3 class="scroll-effect slide-up">💡 Creative Projects</h3>
+    <div class="gallery-grid">
+      <figure>
+        <img src="assets/gallery/design1.jpg" alt="Poster Design">
+        <figcaption>Poster Design for an Awareness Event</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gallery/dev1.jpg" alt="Portfolio Website">
+        <figcaption>Developing My Portfolio Website</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
+
+<!-- === Video Section === -->
 <section class="about-videos">
-  <h2>Visual Impact</h2>
+  <h2 class="scroll-effect fade-in">Visual Impact</h2>
+  <p class="video-intro scroll-effect fade-in">
+    A few highlights from events, workshops, and creative projects I’ve worked on.
+  </p>
+
   <div class="video-grid">
-    <div class="video-box">
-      <iframe src="./../assets/Vedios/Lincoln - Mental Health.mp4" frameborder="0" allowfullscreen></iframe>
-      <p>🎥 Event Recap – Lincoln Corner</p>
+    <!-- Video Example -->
+    <div class="video-box scroll-effect slide-up">
+      <video controls>
+        <source src="./../assets/Vedios/Lincoln - Mental Health.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>🎥 Event Recap – Mental Health Awareness</p>
     </div>
-    <div class="video-box">
-      <iframe src="./../assets/Vedios/Lincoln - Mental Health.mp4" frameborder="0" allowfullscreen></iframe>
-      <p>🎨 Video Editing Showcase</p>
+
+    <!-- Another Video Example -->
+    <div class="video-box scroll-effect slide-up">
+      <video controls>
+        <source src="./../assets/Vedios/Cultural-Exchange.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>🎥 Cultural Exchange Highlights</p>
     </div>
   </div>
 </section>
 
-<section class="milestones">
-  <h2>Milestones</h2>
-  <div class="timeline-container">
-    <!-- Reuse your timeline-item HTML from main page -->
-  </div>
-</section>
 
-<section class="testimonials">
-  <h2>What Others Say</h2>
 
-  <!-- Testimonials display area (only approved) -->
-  <div id="testimonialDisplay"></div>
-
-  <!-- Feedback form -->
-  <form id="testimonialForm">
-    <h3>Leave a Testimonial</h3>
-    
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" required>
-
-    <label for="message">Your Message:</label>
-    <textarea id="message" required></textarea>
-
-    <label for="rating">Rating:</label>
-    <select id="rating" required>
-      <option value="" disabled selected>Select</option>
-      <option value="⭐">⭐</option>
-      <option value="⭐⭐">⭐⭐</option>
-      <option value="⭐⭐⭐">⭐⭐⭐</option>
-      <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
-      <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
-    </select>
-
-    <button type="submit">Submit Review</button>
-    <p id="statusMsg" style="color: green;"></p>
-  </form>
-</section>
-
-<section class="testimonials">
-  <h2>What Others Say</h2>
-  <div id="testimonial-container" class="testimonial-grid">
-    <!-- Testimonials will be injected here -->
-  </div>
-</section>
 
   <!-- === Certificates Carousel === -->
   <section>
     <h2 class="scroll-effect slide-up">My Certifications</h2>
 
-    <div class="carousel-container scroll-effect fade-in">
-      <div class="carousel" id="carousel">
-        <img src="./../assets/Certificates Images/Coursera 25VY8QWLTXMF.jpg" alt="Certificate 1" />
-        <img src="./../assets/Certificates Images/Coursera 25VY8QWLTXMF.jpg" alt="Certificate 2" />
-        <img src="./../assets/Certificates Images/Coursera 25VY8QWLTXMF.jpg" alt="Certificate 3" />
-      </div>
-    </div>
+<div class="carousel-container scroll-effect fade-in">
+  <div class="carousel" id="carousel">
+    <img src="./../assets/Certificates Images/Coursera 9HURB96FLV6S.jpg" alt="Intuit Academy Bookkeeping" />
+    <img src="./../assets/Certificates Images/Coursera 74IXPHAUYVXS.jpg" alt="Bookkeeping Basics" />
+    <img src="./../assets/Certificates Images/Coursera BCTSF39KA008.jpg" alt="Assets in Accounting" />
+    <img src="./../assets/Certificates Images/Coursera B2EQ0KSPDGVA.jpg" alt="Financial Statement Analysis" />
+    <img src="./../assets/Certificates Images/Coursera JKUNIMDX3EZ1.jpg" alt="Liabilities and Equity in Accounting" />
+    <img src="./../assets/Certificates Images/Coursera D4LG2BZMQQW1.jpg" alt="Python for Everybody" />
+    <img src="./../assets/Certificates Images/Coursera WYI5G3PO75KK.jpg" alt="Capstone: Retrieving, Processing, and Visualizing Data" />
+    <img src="./../assets/Certificates Images/Coursera 5LX5JMBCZEKJ.jpg" alt="Python Data Structures" />
+    <img src="./../assets/Certificates Images/Coursera HSO86HYNKG6I.jpg" alt="Using Databases with Python" />
+    <img src="./../assets/Certificates Images/Coursera LAWEY10XG3GG.jpg" alt="Programming for Everybody" />
+    <img src="./../assets/Certificates Images/Coursera P2KGR216DCU8.jpg" alt="Using Python to Access Web Data" />
+    <img src="./../assets/Certificates Images/Coursera HR6TFA5FM6EF.jpg" alt="Advanced MySQL Topics" />
+    <img src="./../assets/Certificates Images/Coursera BC0D0L18N5D6.jpg" alt="Introduction to Databases" />
+    <img src="./../assets/Certificates Images/Coursera EFEFE1POJYGG.jpg" alt="Version Control" />
+    <img src="./../assets/Certificates Images/Coursera SWBAVQOU4JI1.jpg" alt="Database Structures and Management with MySQL" />
+    <img src="./../assets/Certificates Images/Coursera HT233OD2JGAV.jpg" alt="Python Programming Fundamentals" />
+    <img src="./../assets/Certificates Images/Coursera HXGJXJ6B9E8B.jpg" alt="Work Smarter with Microsoft Excel" />
+    <img src="./../assets/Certificates Images/Coursera UUV2MQOCPXZ8.jpg" alt="Data Analysis and Visualization with Python" />
+    <img src="./../assets/Certificates Images/Coursera R7Z3J0H0GK0U.jpg" alt="Deep Learning for Business" />
+    <img src="./../assets/Certificates Images/Coursera EWNBBYUCCP9I.jpg" alt="AI For Everyone" />
+    <img src="./../assets/Certificates Images/Coursera PQ4ZUZI4071L.jpg" alt="Chinese for HSK 1" />
+    <img src="./../assets/Certificates Images/Coursera AVSUBH832W7R.jpg" alt="How to write a research paper" />
+    <img src="./../assets/Certificates Images/Coursera H0RQEJUPPEP4.jpg" alt="The World of Classroom Assessment and Testing" />
+    <img src="./../assets/Certificates Images/Coursera XO4RK1UPAHKU.jpg" alt="Statistical Analysis of Data for Researchers" />
+    <img src="./../assets/Certificates Images/Coursera YDC442O5Y3P2.jpg" alt="Getting Started with Microsoft Excel" />
+    <img src="./../assets/Certificates Images/Coursera 6EPK6PCB6PUV.jpg" alt="Using Basic Formulas and Functions in Microsoft Excel" />
+    <img src="./../assets/Certificates Images/Coursera 25VY8QWLTXMF.jpg" alt="Create a Project Management Tracker using Microsoft Excel" />
+    <img src="./../assets/Certificates Images/Coursera SKG2IK45P0FF.jpg" alt="Create a Financial Statement using Microsoft Excel" />
+    <img src="./../assets/Certificates Images/Coursera WVBELOA8RFXY.jpg" alt="Introduction to Project Management" />
+  </div>
+</div>
+
 
     <div class="carousel-buttons scroll-effect slide-up">
       <button onclick="prevSlide()">← Prev</button>
@@ -147,10 +181,25 @@
     </div>
   </section>
 
-<section class="about-cta">
-  <h2 class="scroll-effect fade-in">Let’s Connect!</h2>
-  <p class="scroll-effect slide-in">Looking for a creative, versatile individual to join your team or collaborate on meaningful work?</p>
-  <a class="button scroll-effect slide-in" href="./contact.html">Get in Touch</a>
+<section class="contact">
+  <h2 class="scroll-effect slide-up">Contact Me</h2>
+  <p class="scroll-effect slide-up">Feel free to reach out for collaborations, internships, or freelance projects!</p>
+
+  <div class="contact-info">
+    <p class="scroll-effect slide-up"><strong>Email:</strong> <a href="mailto:mk9633273@gmail.com">mk9633273@gmail.com</a></p>
+    <p class="scroll-effect slide-up"><strong>WhatsApp:</strong> <a href="https://wa.me/923046186123" target="_blank">+92 304 6186123</a></p>
+    <div class="social-icons scroll-effect slide-up">
+      <a href="https://linkedin.com/in/muhammadkamalofficial/" target="_blank">
+        <img src="./../assets/icons/Linkedin-removebg.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/muhammad-kamal-asif/" target="_blank">
+        <img src="./../assets/icons/Github-removebg.png" alt="GitHub">
+      </a>
+      <a href="https://www.instagram.com/muhammad_kamal_001/" target="_blank">
+        <img src="./../assets/icons/Instagram-removebg.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
 </section>
 
     <footer>
