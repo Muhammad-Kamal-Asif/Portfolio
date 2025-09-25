@@ -466,4 +466,28 @@ a:hover {
 .skill-icons img:hover {
   transform: scale(1.2);
 }
+
+.contact h2{
+  font-size: 1.6rem;
+}
+
+.contact p {
+  font-size: 0.8rem;
+}
+
+  .long-text {
+    display: none;
+  }
+  .short-text {
+    display: block;
+  }
+}
+
+
+/* Default: show long text, hide short */
+.long-text {
+  display: block;
+}
+.short-text {
+  display: none;
 }
