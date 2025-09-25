@@ -412,3 +412,48 @@ a:hover {
 .timeline-content p {
   line-height: 1.6;
 }
+
+/* Specific tweaks for Galaxy A21s and similar mid-size phones */
+@media (max-width: 400px) {
+  .hero {
+    padding: 4rem 1rem;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    margin: 0.3rem;
+  }
+
+  .skill-icons img {
+    width: 2rem;
+    margin: 0.4rem;
+  }
+
+  .project-card, .cert-card {
+    margin: 0.5rem auto;
+    max-width: 95%;
+  }
+
+  .about p, .timeline-content p {
+    font-size: 0.9rem;
+  }
+
+  .contact p {
+    font-size: 0.9rem;
+  }
+}
