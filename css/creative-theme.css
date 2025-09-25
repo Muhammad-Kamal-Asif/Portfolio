@@ -456,4 +456,14 @@ a:hover {
   .contact p {
     font-size: 0.9rem;
   }
+
+  .skill-icons img {
+  width: 2rem;
+  margin: 0.4rem;
+  transition: transform 0.3s;
+}
+
+.skill-icons img:hover {
+  transform: scale(1.2);
+}
 }
