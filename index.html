@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="./assets/images/Logo.png" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Muhammad Kamal – Portfolio</title>
-  <link rel="stylesheet" href="css/creative-theme.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/carousel-scrollanimation.css">
     <!-- Google Font: Lato -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -24,9 +24,6 @@
   <header class="hero">
     <nav class="nav">
       <a href="./index.html" class="nav-item" >Home</a>
-      <a href="./pages/about.html" class="nav-item" >About</a>
-      <a href="./pages/skills.html" class="nav-item" >Skills</a>
-      <a href="./pages/projects.html" class="nav-item" >Projects</a>
       <a href="./pages/certificates.html" class="nav-item" >Certificates</a>
       <a href="./pages/contact.html" class="nav-item" >Contact</a>
       <span class="nav-indicator"></span>
@@ -35,7 +32,7 @@
     <div class="hero-content">
       <img class="c-avatar__img scroll-effect slide-up" src="./assets/images/Profile Picture 11.jpg" alt="Profile Image">
       <h1 class="scroll-effect slide-in-left">Muhammad Kamal</h1>
-      <p class="scroll-effect slide-in-right">BBA Student | Graphic Designer | Bookkeeper | Frontend Developer</p>
+      <p class="scroll-effect slide-in-right">Business Administration | Data Analytics & Strategy | Community Management</p>
       <p class="tagline scroll-effect slide-up">Turning ideas into results through creativity and consistency.</p>
     </div>
   </header>
@@ -100,40 +97,88 @@
     <img src="assets/icons/MySQL-removebg.png" alt="MySQL" title="MySQL">
   </div>
 </section>
+  
+<!-- === Video Section === -->
+<section class="about-videos">
+  <h2 class="scroll-effect fade-in">Visual Impact</h2>
+  <p class="video-intro scroll-effect fade-in">
+    A few highlights from events, workshops, and creative projects I’ve worked on.
+  </p>
 
-<section class="projects">
-  <h2 class="scroll-effect slide-up">Projects</h2>
-  <div class="project-grid">
-
-    <div class="project-card scroll-effect slide-in-left">
-      <img src="assets/projects/Portfolio Landing Page.PNG" alt="Project 1">
-      <div class="project-info">
-        <h3>Landing Page</h3>
-        <p>A modern responsive landing page built using HTML, CSS, and Flexbox.</p>
-        <a href="https://your-live-demo-link.com" target="_blank">View Project</a>
-      </div>
+  <div class="video-grid">
+    <!-- Video Example -->
+    <div class="video-box scroll-effect slide-up">
+      <video controls>
+        <source src="./../assets/Vedios/Lincoln - Mental Health.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Event Recap – Mental Health Awareness</p>
     </div>
 
-    <div class="project-card scroll-effect slide-in-left">
-      <img src="assets/images/project2.png" alt="Project 2">
-      <div class="project-info">
-        <h3>Portfolio Website</h3>
-        <p>Personal portfolio showcasing projects, skills, and certifications.</p>
-        <a href="https://your-live-demo-link.com" target="_blank">View Project</a>
-      </div>
+    <!-- Another Video Example -->
+    <div class="video-box scroll-effect slide-up">
+      <video controls>
+        <source src="./../assets/Vedios/Lincoln - Summer Camp.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Event Recap – Summer Camp Highlights</p>
     </div>
 
-    <div class="project-card scroll-effect slide-in-left">
-      <img src="assets/images/project3.png" alt="Project 3">
-      <div class="project-info">
-        <h3>Bookkeeping Dashboard</h3>
-        <p>A bookkeeping UI prototype designed in Figma with Excel reports.</p>
-        <a href="https://your-live-demo-link.com" target="_blank">View Project</a>
-      </div>
+    <div class="video-box scroll-effect slide-up">
+      <video controls>
+        <source src="./../assets/Vedios/Lincoln - SOS Village Visit.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Event Recap – S0S Village Visit</p>
     </div>
-
   </div>
 </section>
+
+<!-- === PDF Projects Section === -->
+<section class="pdf-projects">
+  <h2 class="scroll-effect fade-in">📑 PDF Projects</h2>
+  <p class="pdf-intro scroll-effect fade-in">
+    Some of my written projects, reports, and creative documents available for download.
+  </p>
+
+  <div class="pdf-grid" id="pdf-container">
+    <!-- JS will inject PDF previews here -->
+  </div>
+</section>
+
+<script>
+  // Add your PDF files here (title + filename + optional description)
+  const pdfFiles = [
+    { 
+      title: "Marketing Research Report", 
+      file: "Booklet (Cohort-III).pdf", 
+      desc: "A detailed research project analyzing consumer behavior trends." 
+    },
+    { 
+      title: "Community Engagement Plan", 
+      file: "EXCHANGE PROGRAM - Record.pdf", 
+      desc: "A project proposal focused on youth leadership and outreach strategies." 
+    }
+  ];
+
+  const container = document.getElementById("pdf-container");
+
+  pdfFiles.forEach(pdf => {
+    const card = document.createElement("div");
+    card.className = "pdf-card scroll-effect slide-up";
+    card.innerHTML = `
+      <h3>${pdf.title}</h3>
+      <p>${pdf.desc}</p>
+      <div class="pdf-preview">
+        <iframe src="./../assets/pdfs/${pdf.file}#toolbar=0&navpanes=0&scrollbar=0" 
+                width="100%" height="250px"></iframe>
+      </div>
+      <a href="./../assets/pdfs/${pdf.file}" download class="download-btn">Download PDF</a>
+    `;
+    container.appendChild(card);
+  });
+</script>
+</div>
 
 <section class="timeline">
   <h2 class="scroll-effect slide-in-right">Experience & Education</h2>
@@ -143,9 +188,10 @@
     <div class="timeline-item scroll-effect slide-in-right">
       <div class="timeline-dot"></div>
       <div class="timeline-content">
-        <h3>Volunteer Event Planner – Lincoln Corner Sargodha</h3>
-        <span>2025 – Present</span>
-        <p>Organized weekly cultural and educational events, promoted cross-cultural understanding, and coordinated interactive learning activities for youth engagement.</p>
+        <h3>Ambassador - Lincoln Corner, University of Sargodha</h3>
+        <span>Apr 2025 - Present</span>
+        <p>Assisting in planning, hosting, and managing 50+ educational and community-focused events.</p>
+        <p>Engaging with 8000+ visitors and coordinating logistics for sessions.</p>
       </div>
     </div>
 
@@ -192,59 +238,46 @@
 <section class="certifications">
   <h2 class="scroll-effect slide-up">Certifications</h2>
 
-  <div class="cert-grid" id="certGrid">
-    <!-- TOP 6 CERTIFICATES -->
-    <div class="cert-card scroll-effect slide-up">
-      <img src="assets/Certificates Images/Coursera 9HURB96FLV6S.jpg" alt="Intuit Academy Bookkeeping" class="cert-image">
-      <h3>Intuit Academy Bookkeeping</h3>
-      <p>Intuit / Coursera</p>
-    </div>
-    <div class="cert-card scroll-effect slide-up">
-      <img src="assets/Certificates Images/Coursera D4LG2BZMQQW1.jpg" alt="Python for Everybody" class="cert-image">
-      <h3>Python for Everybody</h3>
-      <p>University of Michigan / Coursera</p>
-    </div>
-    <div class="cert-card scroll-effect slide-up">
-      <img src="assets/Certificates Images/Coursera WYI5G3PO75KK.jpg" alt="Capstone: Retrieving, Processing, and Visualizing Data with Python" class="cert-image">
-      <h3>Capstone: Retrieving, Processing, and Visualizing Data with Python</h3>
-      <p>University of Michigan / Coursera</p>
-    </div>
-    <div class="cert-card scroll-effect slide-up">
-       <img src="assets/Certificates Images/Coursera HR6TFA5FM6EF.jpg" alt="Advanced MySQL Topics" class="cert-image">
-      <h3>Advanced MySQL Topics</h3>
-      <p>Meta / Coursera</p>
-    </div>
-    <div class="cert-card scroll-effect slide-up">
-      <img src="assets/Certificates Images/Coursera HXGJXJ6B9E8B.jpg" alt="Work Smarter with Microsoft Excel" class="cert-image">
-      <h3>Work Smarter with Microsoft Excel</h3>
-      <p>Microsoft / Coursera</p>
-    </div>
-    <div class="cert-card scroll-effect slide-up">
-      <img src="assets/Certificates Images/Coursera R7Z3J0H0GK0U.jpg" alt="Deep Learning for Business" class="cert-image">
-      <h3>Deep Learning for Business</h3>
-      <p>YONSEI University / Coursera</p>
-    </div>
-    <div class="cert-card scroll-effect slide-up">
-      <img src="assets/Certificates Images/Coursera EWNBBYUCCP9I.jpg" alt="AI For Everyone" class="cert-image">
-      <h3>AI For Everyone</h3>
-      <p>DeepLearning.AI / Coursera</p>
-    </div>
-    <div class="cert-card scroll-effect slide-up">
-      <img src="assets/Certificates Images/Coursera PQ4ZUZI4071L.jpg" alt="Chinese for HSK 1" class="cert-image">
-      <h3>Chinese for HSK 1</h3>
-      <p>PEKING University / Coursera</p>
-    </div>
-    <div class="cert-card scroll-effect slide-up">
-      <img src="assets/Certificates Images/Coursera AVSUBH832W7R.jpg" alt="How to write a research paper" class="cert-image">
-      <h3>How to write a research paper</h3>
-      <p>The University of Faislabad / Coursera</p>
-    </div>
-</section>
-
-  <div class="show-more-container scroll-effect slide-up">
-    <!-- certificates page to be added -->
-    <button id="showMoreBtn"><a href="./pages/certificates.html">Show More</a></button>
+  <div class="carousel-container scroll-effect fade-in">
+  <div class="carousel" id="carousel">
+    <img src="./assets/Certificates Images/Coursera 9HURB96FLV6S.jpg" alt="Intuit Academy Bookkeeping" />
+    <img src="./assets/Certificates Images/Coursera 74IXPHAUYVXS.jpg" alt="Bookkeeping Basics" />
+    <img src="./assets/Certificates Images/Coursera BCTSF39KA008.jpg" alt="Assets in Accounting" />
+    <img src="./assets/Certificates Images/Coursera B2EQ0KSPDGVA.jpg" alt="Financial Statement Analysis" />
+    <img src="./assets/Certificates Images/Coursera JKUNIMDX3EZ1.jpg" alt="Liabilities and Equity in Accounting" />
+    <img src="./assets/Certificates Images/Coursera D4LG2BZMQQW1.jpg" alt="Python for Everybody" />
+    <img src="./assets/Certificates Images/Coursera WYI5G3PO75KK.jpg" alt="Capstone: Retrieving, Processing, and Visualizing Data" />
+    <img src="./assets/Certificates Images/Coursera 5LX5JMBCZEKJ.jpg" alt="Python Data Structures" />
+    <img src="./assets/Certificates Images/Coursera HSO86HYNKG6I.jpg" alt="Using Databases with Python" />
+    <img src="./assets/Certificates Images/Coursera LAWEY10XG3GG.jpg" alt="Programming for Everybody" />
+    <img src="./assets/Certificates Images/Coursera P2KGR216DCU8.jpg" alt="Using Python to Access Web Data" />
+    <img src="./assets/Certificates Images/Coursera HR6TFA5FM6EF.jpg" alt="Advanced MySQL Topics" />
+    <img src="./assets/Certificates Images/Coursera BC0D0L18N5D6.jpg" alt="Introduction to Databases" />
+    <img src="./assets/Certificates Images/Coursera EFEFE1POJYGG.jpg" alt="Version Control" />
+    <img src="./assets/Certificates Images/Coursera SWBAVQOU4JI1.jpg" alt="Database Structures and Management with MySQL" />
+    <img src="./assets/Certificates Images/Coursera HT233OD2JGAV.jpg" alt="Python Programming Fundamentals" />
+    <img src="./assets/Certificates Images/Coursera HXGJXJ6B9E8B.jpg" alt="Work Smarter with Microsoft Excel" />
+    <img src="./assets/Certificates Images/Coursera UUV2MQOCPXZ8.jpg" alt="Data Analysis and Visualization with Python" />
+    <img src="./assets/Certificates Images/Coursera R7Z3J0H0GK0U.jpg" alt="Deep Learning for Business" />
+    <img src="./assets/Certificates Images/Coursera EWNBBYUCCP9I.jpg" alt="AI For Everyone" />
+    <img src="./assets/Certificates Images/Coursera PQ4ZUZI4071L.jpg" alt="Chinese for HSK 1" />
+    <img src="./assets/Certificates Images/Coursera AVSUBH832W7R.jpg" alt="How to write a research paper" />
+    <img src="./assets/Certificates Images/Coursera H0RQEJUPPEP4.jpg" alt="The World of Classroom Assessment and Testing" />
+    <img src="./assets/Certificates Images/Coursera XO4RK1UPAHKU.jpg" alt="Statistical Analysis of Data for Researchers" />
+    <img src="./assets/Certificates Images/Coursera YDC442O5Y3P2.jpg" alt="Getting Started with Microsoft Excel" />
+    <img src="./assets/Certificates Images/Coursera 6EPK6PCB6PUV.jpg" alt="Using Basic Formulas and Functions in Microsoft Excel" />
+    <img src="./assets/Certificates Images/Coursera 25VY8QWLTXMF.jpg" alt="Create a Project Management Tracker using Microsoft Excel" />
+    <img src="./assets/Certificates Images/Coursera SKG2IK45P0FF.jpg" alt="Create a Financial Statement using Microsoft Excel" />
+    <img src="./assets/Certificates Images/Coursera WVBELOA8RFXY.jpg" alt="Introduction to Project Management" />
   </div>
+</div>
+
+    <div class="carousel-buttons scroll-effect slide-up">
+      <button onclick="prevSlide()">← Prev</button>
+      <button onclick="nextSlide()">Next →</button>
+    </div>
+
+</section>
 
 <section class="contact">
   <h2 class="scroll-effect slide-up">Contact Me</h2>
