@@ -58,7 +58,7 @@ ul {
 header.hero {
   background: linear-gradient(135deg, var(--primary), #6ccff6);
   color: white;
-  padding: 1.5rem 2rem 6rem 2rem; /* Extra bottom padding for curve */
+  padding: 1.5rem 2rem 2rem 2rem; /* Extra bottom padding for curve */
   text-align: center;
   border-radius: 0 0 50px 50px;
   box-shadow: var(--shadow-sm);
@@ -396,7 +396,6 @@ footer {
   color: #fff;
   padding: 2rem;
   text-align: center;
-  margin-top: 4rem;
 }
 
 /* 11. UTILITIES */
@@ -415,24 +414,24 @@ footer {
 /* Mobile Phones (Including Galaxy A21s Optimization) */
 @media (max-width: 480px) {
   .hero {
-    padding: 2rem 1rem 4rem 1rem;
-    border-radius: 0 0 30px 30px;
+    padding: 1rem 0.5rem 2rem 0.5rem;
+    border-radius: 0 0 15px 15px;
   }
 
-  .hero h1 { font-size: 1.8rem; }
-  .hero p.tagline { font-size: 1rem; }
+  .hero h1 { font-size: 0.9rem; }
+  .hero p.tagline { font-size: 0.5rem; }
   
-  nav { gap: 0.5rem; }
-  nav a { font-size: 0.9rem; }
+  nav { gap: 0.25rem; }
+  nav a { font-size: 0.45rem; }
   
-  .timeline-container { padding-left: 20px; }
-  .timeline-dot { width: 12px; height: 12px; left: -27px; }
+  .timeline-container { padding-left: 10px; }
+  .timeline-dot { width: 6px; height: 6px; left: -13.5px; }
   
   /* Text Toggles for Small Screens */
   .long-text { display: none; }
   .short-text { display: block; }
   
-  .skill-icons img { width: 2.5rem; }
+  .skill-icons img { width: 1.25rem; }
 }
 
 /* ======================== */
