@@ -95,88 +95,6 @@
     <img src="assets/icons/MySQL-removebg.png" alt="MySQL" title="MySQL">
   </div>
 </section>
-  
-<!-- === Video Section === -->
-<section class="about-videos">
-  <h2 class="scroll-effect fade-in">Visual Impact</h2>
-  <p class="video-intro scroll-effect fade-in">
-    A few highlights from events, workshops, and creative projects I’ve worked on.
-  </p>
-
-  <div class="video-grid">
-    <!-- Video Example -->
-    <div class="video-box scroll-effect slide-up">
-      <video controls>
-        <source src="./assets/Vedios/Lincoln - Mental Health.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p>Event Recap – Mental Health Awareness</p>
-    </div>
-
-    <!-- Another Video Example -->
-    <div class="video-box scroll-effect slide-up">
-      <video controls>
-        <source src="./assets/Vedios/Lincoln - Summer Camp.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p>Event Recap – Summer Camp Highlights</p>
-    </div>
-
-    <div class="video-box scroll-effect slide-up">
-      <video controls>
-        <source src="./assets/Vedios/Lincoln - SOS Village Visit.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p>Event Recap – S0S Village Visit</p>
-    </div>
-  </div>
-</section>
-
-<!-- === PDF Projects Section === -->
-<section class="pdf-projects">
-  <h2 class="scroll-effect fade-in">📑 PDF Projects</h2>
-  <p class="pdf-intro scroll-effect fade-in">
-    Some of my written projects, reports, and creative documents available for download.
-  </p>
-
-  <div class="pdf-grid" id="pdf-container">
-    <!-- JS will inject PDF previews here -->
-  </div>
-</section>
-
-<script>
-  // Add your PDF files here (title + filename + optional description)
-  const pdfFiles = [
-    { 
-      title: "Marketing Research Report", 
-      file: "Booklet (Cohort-III).pdf", 
-      desc: "A detailed research project analyzing consumer behavior trends." 
-    },
-    { 
-      title: "Community Engagement Plan", 
-      file: "EXCHANGE PROGRAM - Record.pdf", 
-      desc: "A project proposal focused on youth leadership and outreach strategies." 
-    }
-  ];
-
-  const container = document.getElementById("pdf-container");
-
-  pdfFiles.forEach(pdf => {
-    const card = document.createElement("div");
-    card.className = "pdf-card scroll-effect slide-up";
-    card.innerHTML = `
-      <h3>${pdf.title}</h3>
-      <p>${pdf.desc}</p>
-      <div class="pdf-preview">
-        <iframe src="./assets/pdfs/${pdf.file}#toolbar=0&navpanes=0&scrollbar=0" 
-                width="100%" height="250px"></iframe>
-      </div>
-      <a href="./../assets/pdfs/${pdf.file}" download class="download-btn">Download PDF</a>
-    `;
-    container.appendChild(card);
-  });
-</script>
-</div>
 
 <section class="timeline">
   <h2 class="scroll-effect slide-in-right">Experience & Education</h2>
@@ -276,6 +194,88 @@
     </div>
 
 </section>
+  
+<!-- === Video Section === -->
+<section class="about-videos">
+  <h2 class="scroll-effect fade-in">Visual Impact</h2>
+  <p class="video-intro scroll-effect fade-in">
+    A few highlights from events, workshops, and creative projects I’ve worked on.
+  </p>
+
+  <div class="video-grid">
+    <!-- Video Example -->
+    <div class="video-box scroll-effect slide-up">
+      <video controls>
+        <source src="./assets/Vedios/Lincoln - Mental Health.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Event Recap – Mental Health Awareness</p>
+    </div>
+
+    <!-- Another Video Example -->
+    <div class="video-box scroll-effect slide-up">
+      <video controls>
+        <source src="./assets/Vedios/Lincoln - Summer Camp.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Event Recap – Summer Camp Highlights</p>
+    </div>
+
+    <div class="video-box scroll-effect slide-up">
+      <video controls>
+        <source src="./assets/Vedios/Lincoln - SOS Village Visit.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Event Recap – S0S Village Visit</p>
+    </div>
+  </div>
+</section>
+
+<!-- === PDF Projects Section === -->
+<section class="pdf-projects">
+  <h2 class="scroll-effect fade-in">📑 PDF Projects</h2>
+  <p class="pdf-intro scroll-effect fade-in">
+    Some of my written projects, reports, and creative documents available for download.
+  </p>
+
+  <div class="pdf-grid" id="pdf-container">
+    <!-- JS will inject PDF previews here -->
+  </div>
+</section>
+
+<script>
+  // Add your PDF files here (title + filename + optional description)
+  const pdfFiles = [
+    { 
+      title: "Marketing Research Report", 
+      file: "Booklet (Cohort-III).pdf", 
+      desc: "A detailed research project analyzing consumer behavior trends." 
+    },
+    { 
+      title: "Community Engagement Plan", 
+      file: "EXCHANGE PROGRAM - Record.pdf", 
+      desc: "A project proposal focused on youth leadership and outreach strategies." 
+    }
+  ];
+
+  const container = document.getElementById("pdf-container");
+
+  pdfFiles.forEach(pdf => {
+    const card = document.createElement("div");
+    card.className = "pdf-card scroll-effect slide-up";
+    card.innerHTML = `
+      <h3>${pdf.title}</h3>
+      <p>${pdf.desc}</p>
+      <div class="pdf-preview">
+        <iframe src="./assets/pdfs/${pdf.file}#toolbar=0&navpanes=0&scrollbar=0" 
+                width="100%" height="250px"></iframe>
+      </div>
+      <a href="./../assets/pdfs/${pdf.file}" download class="download-btn">Download PDF</a>
+    `;
+    container.appendChild(card);
+  });
+</script>
+</div>
 
 <section class="contact">
   <h2 class="scroll-effect slide-up">Contact Me</h2>
