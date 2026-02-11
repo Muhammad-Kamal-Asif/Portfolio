@@ -1,6 +1,5 @@
 /* ========================================= */
 /* MUHAMMAD KAMAL PORTFOLIO - MAIN CSS     */
-/* Cleaned & Optimized Version             */
 /* ========================================= */
 
 /* 1. IMPORTS & VARIABLES */
@@ -220,14 +219,17 @@ section h2::after {
   animation: fillBar 1.5s ease-out forwards;
 }
 
-/* Individual Levels */
-.level.bookkeeping { --final-width: 80%; }
-.level.graphic-designing { --final-width: 95%; }
-.level.frontend { --final-width: 70%; }
-.level.ms-excel { --final-width: 85%; }
-.level.digital-marketing { --final-width: 73%; }
-.level.seo { --final-width: 70%; }
-.level.research-review-academic-writing { --final-width: 90%; }
+/* Core Technical & Data Skills */
+.level.data-analytics { --final-width: 92%; } /* Reflects 50+ courses & Python specialization */
+.level.strategy-automation { --final-width: 95%; } /* Reflects TriSyn & Skill Squad leadership */
+
+/* Marketing & Web */
+.level.digital-marketing { --final-width: 88%; } /* Reflects PAAP internship & Agency work */
+.level.frontend-design { --final-width: 75%; } /* Reflects UI/UX and web design roles */
+
+/* Finance & Academic */
+.level.finance-bookkeeping { --final-width: 90%; } /* Reflects BBA specialization & Bookkeeping cert */
+.level.academic-writing { --final-width: 93%; } /* Reflects Skill Squad & 3rd ICSB coordination */
 
 @keyframes fillBar {
   to { width: var(--final-width); }
@@ -241,7 +243,7 @@ section h2::after {
 }
 
 .skill-icons img {
-  width: 3.5rem;
+  width: 2rem;
   transition: var(--transition);
 }
 
