@@ -1,24 +1,26 @@
 /* ========================================= */
-/* MUHAMMAD KAMAL PORTFOLIO - MAIN CSS     */
+/* MUHAMMAD KAMAL PORTFOLIO - MAIN CSS       */
 /* ========================================= */
 
 /* 1. IMPORTS & VARIABLES */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Quicksand:wght@400;500;600&display=swap');
 
 :root {
-  /* Brand Colors */
-  --primary: #FF6B6B;       /* Bright Coral/Red */
-  --secondary: #FFD93D;     /* Yellow Accent */
-  --accent: #6BCB77;        /* Green for skills/success */
-  --text-dark: #1f1f1f;     /* Main text */
-  --text-light: #555555;    /* Secondary text */
-  --background: #fcfaf9;    /* Soft White/Cream */
-  --card-bg: #ffffff;       /* Pure White */
+  /* --- PROFESSIONAL COLOR SCHEME (Deep Data Blue) --- */
+  --primary: #0f4c75;       /* Deep Navy Blue (Trust & Strategy) */
+  --secondary: #ffa502;     /* Gold/Amber (Focus/Action) */
+  --accent: #3282b8;        /* Steel Blue (Tech/Data) */
   
+  --text-dark: #1b262c;     /* Dark Slate */
+  --text-light: #576574;    /* Cool Grey */
+  
+  --background: #f4f6f8;    /* Corporate Grey-White */
+  --card-bg: #ffffff;       /* Pure White */
+   
   /* Layout & Effects */
   --border-radius: 12px;
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 4px 12px rgba(15, 76, 117, 0.08);
+  --shadow-md: 0 8px 20px rgba(15, 76, 117, 0.15);
   --transition: all 0.3s ease;
 }
 
@@ -30,15 +32,15 @@
 }
 
 body {
-  font-family: 'Quicksand', sans-serif; /* Body font */
+  font-family: 'Quicksand', sans-serif;
   background-color: var(--background);
   color: var(--text-dark);
   line-height: 1.6;
-  overflow-x: hidden; /* Prevents horizontal scrollbar issues */
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif; /* Heading font */
+  font-family: 'Poppins', sans-serif;
   color: var(--primary);
   margin-bottom: 0.5rem;
 }
@@ -55,9 +57,9 @@ ul {
 
 /* 3. HEADER & NAVIGATION */
 header.hero {
-  background: linear-gradient(135deg, var(--primary), #6ccff6);
+  background: linear-gradient(135deg, #0f4c75, #020c23); 
   color: white;
-  padding: 1.5rem 2rem 2rem 2rem; /* Extra bottom padding for curve */
+  padding: 1.5rem 2rem 2rem 2rem;
   text-align: center;
   border-radius: 0 0 50px 50px;
   box-shadow: var(--shadow-sm);
@@ -65,7 +67,6 @@ header.hero {
   z-index: 100;
 }
 
-/* Navbar */
 nav {
   display: flex;
   justify-content: center;
@@ -84,7 +85,6 @@ nav a {
   padding: 0.5rem 0;
 }
 
-/* Nav Hover Animation */
 nav a::after {
   content: '';
   position: absolute;
@@ -113,53 +113,51 @@ nav a:hover::after {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  border: 4px solid rgba(255, 255, 255, 0.8);
+  border: 4px solid rgba(255, 255, 255, 0.9);
   margin-bottom: 20px;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .hero h1 {
   font-size: 3rem;
-  color: #fff; /* Override global primary color for hero */
-  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .hero p.tagline {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   margin-top: 1rem;
 }
 
 /* 4. SECTIONS & LAYOUT */
 section {
-  padding: 2.5rem 1.5rem; /* Reduced from 4rem to 2.5rem */
+  padding: 1.5rem 1.5rem;
   max-width: 1100px;
   margin: auto;
 }
 
 section h2 {
   font-size: 2.2rem;
-  margin-bottom: 1rem; /* Reduced from 2rem to 1rem (Pulls the subtitle closer) */
+  margin-bottom: 1rem;
   text-align: center;
   position: relative;
   display: inline-block;
   width: 100%;
 }
 
-/* Underline effect for Section Headings */
 section h2::after {
   content: '';
   display: block;
   width: 60px;
   height: 4px;
-  background: var(--primary);
+  background: var(--secondary);
   margin: 10px auto 0 auto;
   border-radius: 2px;
 }
 
-/* 5. CARDS (Unified Styles) */
-/* Used for Projects, Certificates, Videos, etc. */
+/* 5. CARDS (Unified Styles & Flexbox) */
 .card, .project-card, .cert-card, .video-box, .pdf-card {
   background: var(--card-bg);
   border-radius: var(--border-radius);
@@ -167,13 +165,19 @@ section h2::after {
   padding: 1.5rem;
   transition: var(--transition);
   overflow: hidden;
-  height: 100%; /* Ensure equal height in grids */
-  text-align: center; /* <--- ADDED THIS: Centers text inside all cards */
+  height: 100%; /* Critical for Grid Alignment */
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.03);
+  
+  /* Flexbox for Internal Alignment */
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover, .project-card:hover, .cert-card:hover, .video-box:hover, .pdf-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-md);
+  border-color: rgba(50, 130, 184, 0.2);
 }
 
 .card img, .project-card img, .cert-card img {
@@ -182,7 +186,6 @@ section h2::after {
   margin-bottom: 1rem;
 }
 
-/* Ensure the text inside PDF cards aligns nicely */
 .pdf-card p {
   margin-bottom: 1.5rem;
   color: var(--text-light);
@@ -202,10 +205,11 @@ section h2::after {
   font-weight: 600;
   display: block;
   margin-bottom: 0.5rem;
+  color: var(--primary);
 }
 
 .skill-bars .bar {
-  background: #eee;
+  background: #e1e8ed;
   border-radius: 10px;
   overflow: hidden;
   height: 12px;
@@ -213,23 +217,19 @@ section h2::after {
 
 .skill-bars .level {
   height: 100%;
-  background: var(--accent);
-  width: 0; /* Animated via CSS keyframes */
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  width: 0;
   border-radius: 10px;
   animation: fillBar 1.5s ease-out forwards;
 }
 
-/* Core Technical & Data Skills */
-.level.data-analytics { --final-width: 92%; } /* Reflects 50+ courses & Python specialization */
-.level.strategy-automation { --final-width: 95%; } /* Reflects TriSyn & Skill Squad leadership */
-
-/* Marketing & Web */
-.level.digital-marketing { --final-width: 88%; } /* Reflects PAAP internship & Agency work */
-.level.frontend-design { --final-width: 75%; } /* Reflects UI/UX and web design roles */
-
-/* Finance & Academic */
-.level.finance-bookkeeping { --final-width: 90%; } /* Reflects BBA specialization & Bookkeeping cert */
-.level.academic-writing { --final-width: 93%; } /* Reflects Skill Squad & 3rd ICSB coordination */
+/* Specific Skill Widths */
+.level.data-analytics { --final-width: 92%; }
+.level.strategy-automation { --final-width: 95%; }
+.level.digital-marketing { --final-width: 88%; }
+.level.frontend-design { --final-width: 75%; }
+.level.finance-bookkeeping { --final-width: 90%; }
+.level.academic-writing { --final-width: 93%; }
 
 @keyframes fillBar {
   to { width: var(--final-width); }
@@ -245,10 +245,12 @@ section h2::after {
 .skill-icons img {
   width: 2rem;
   transition: var(--transition);
+  filter: grayscale(20%);
 }
 
 .skill-icons img:hover {
   transform: scale(1.15) rotate(5deg);
+  filter: grayscale(0%);
 }
 
 /* 7. TIMELINE (Experience) */
@@ -257,7 +259,7 @@ section h2::after {
   max-width: 800px;
   margin: 2rem auto;
   padding-left: 30px;
-  border-left: 3px solid var(--primary);
+  border-left: 3px solid #e1e8ed;
 }
 
 .timeline-item {
@@ -268,12 +270,13 @@ section h2::after {
 .timeline-dot {
   width: 16px;
   height: 16px;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   border-radius: 50%;
   position: absolute;
-  left: -39px; /* Aligns dot with line */
+  left: -39px;
   top: 5px;
   border: 3px solid #fff;
+  box-shadow: 0 0 0 3px rgba(255, 165, 2, 0.2);
 }
 
 .timeline-content h3 {
@@ -284,23 +287,13 @@ section h2::after {
 
 .timeline-content span {
   font-size: 0.9rem;
-  color: var(--primary);
+  color: var(--accent);
   font-weight: 600;
   display: block;
   margin-bottom: 0.5rem;
 }
 
 /* 8. VIDEO & PDF GRIDS */
-.about-videos, .pdf-projects {
-  text-align: center;
-}
-
-.video-intro, .pdf-intro {
-  max-width: 700px;
-  margin: 0 auto 2rem auto; /* Reduced from 3rem to 2rem */
-  color: var(--text-light);
-}
-
 .about-videos, .pdf-projects, .certifications {
   text-align: center;
 }
@@ -311,13 +304,11 @@ section h2::after {
   color: var(--text-light);
 }
 
-/* Added .cert-grid to this list */
 .video-grid, .pdf-grid, .gallery-grid, .cert-grid {
   display: grid;
-  /* This magic line creates responsive columns */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 2rem;
-  text-align: left; /* Keep card text aligned left or center as defined in card styles */
+  text-align: left;
   margin-top: 2rem;
 }
 
@@ -350,14 +341,15 @@ section h2::after {
   font-weight: 600;
   font-size: 0.95rem;
   transition: var(--transition);
-  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 4px 10px rgba(15, 76, 117, 0.3);
 }
 
 .button:hover, .download-btn:hover {
-  background: var(--secondary);
-  color: var(--text-dark);
+  background: var(--accent);
+  color: white;
   transform: translateY(-2px);
   text-decoration: none;
+  box-shadow: 0 6px 15px rgba(50, 130, 184, 0.4);
 }
 
 /* 10. CONTACT & FOOTER */
@@ -368,11 +360,10 @@ section h2::after {
 .contact p {
   color: var(--text-light);
   max-width: 600px;
-  margin: 0.5rem auto 0 auto; /* Drastically reduced margins */
+  margin: 0.5rem auto 0 auto;
 }
 
 .contact-info {
-  /* text-align: center;  <-- Removed because parent (.contact) now handles it */
   margin-top: 1rem;
 }
 
@@ -394,7 +385,7 @@ section h2::after {
 }
 
 footer {
-  background: var(--text-dark);
+  background: var(--primary);
   color: #fff;
   padding: 2rem;
   text-align: center;
@@ -413,7 +404,7 @@ footer {
   nav a { margin: 0 0.5rem; font-size: 1rem; }
 }
 
-/* Mobile Phones (Including Galaxy A21s Optimization) */
+/* Mobile Phones */
 @media (max-width: 480px) {
   .hero {
     padding: 1rem 0.5rem 2rem 0.5rem;
@@ -422,40 +413,36 @@ footer {
 
   .hero h1 { font-size: 0.9rem; }
   .hero p.tagline { font-size: 0.5rem; }
-  
+   
   nav { gap: 0.25rem; }
   nav a { font-size: 0.45rem; }
-  
+   
   .timeline-container { padding-left: 10px; }
   .timeline-dot { width: 6px; height: 6px; left: -13.5px; }
-  
-  /* Text Toggles for Small Screens */
+   
   .long-text { display: none; }
   .short-text { display: block; }
-  
+   
   .skill-icons img { width: 1.25rem; }
 }
 
 /* ======================== */
 /* ===== LIGHTBOX MODAL === */
 /* ======================== */
-
-/* The Modal (background) */
 .lightbox {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
-  z-index: 2000; /* Sit on top of everything */
+  z-index: 2000;
   padding-top: 50px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
-  backdrop-filter: blur(5px); /* Cool blur effect */
+  background-color: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(5px);
 }
 
-/* Modal Content (Image) */
 .lightbox-content {
   margin: auto;
   display: block;
@@ -464,11 +451,10 @@ footer {
   max-height: 85vh;
   object-fit: contain;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   animation: zoomIn 0.3s;
 }
 
-/* Caption of Modal Image */
 #caption {
   margin: auto;
   display: block;
@@ -480,7 +466,6 @@ footer {
   font-family: 'Poppins', sans-serif;
 }
 
-/* The Close Button */
 .close-lightbox {
   position: absolute;
   top: 15px;
@@ -494,12 +479,11 @@ footer {
 
 .close-lightbox:hover,
 .close-lightbox:focus {
-  color: var(--primary);
+  color: var(--secondary);
   text-decoration: none;
   cursor: pointer;
 }
 
-/* Add Animation */
 @keyframes zoomIn {
   from {transform:scale(0)} 
   to {transform:scale(1)}
@@ -508,30 +492,30 @@ footer {
 /* ============================ */
 /* ===== BUTTON CONTAINER ===== */
 /* ============================ */
-
 .btn-container {
   display: flex;
-  align-items: center;      /* Vertically centers both buttons */
-  justify-content: center;  /* Horizontally centers them */
-  gap: 15px;                /* Space between View and Download */
-  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 15px;
+  margin-top: auto; /* Forces container to bottom of flex card */
 }
 
-/* 1. The VIEW Button (Pill Shape) */
+/* View Button (Pill) */
 .view-btn {
   background-color: transparent;
   border: 2px solid var(--primary);
   color: var(--primary);
-  height: 42px;             /* Fixed height */
-  padding: 0 1.5rem;        /* Side padding */
+  height: 42px;
+  padding: 0 1.5rem;
   border-radius: 30px;
   cursor: pointer;
   font-weight: 600;
   font-family: inherit;
   transition: var(--transition);
-  display: flex;            /* Flexbox to align icon + text */
+  display: flex;
   align-items: center;
-  gap: 8px;                 /* Space between Eye Icon and Text */
+  gap: 8px;
 }
 
 .view-btn:hover {
@@ -541,32 +525,282 @@ footer {
   box-shadow: var(--shadow-sm);
 }
 
-/* 2. The DOWNLOAD Button (Circle Shape) */
-/* We use specific targeting to override the global .download-btn style */
+/* Download Button (Circle) */
 .btn-container .download-btn {
-  padding: 0;               /* Remove the big padding */
-  width: 42px;              /* Fixed Width */
-  height: 42px;             /* Fixed Height (matches View button) */
-  border-radius: 50%;       /* Perfect Circle */
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;        /* Icon size */
+  font-size: 1.1rem;
   background: var(--primary);
   color: white;
-  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 4px 10px rgba(15, 76, 117, 0.3);
   transition: var(--transition);
 }
 
 .btn-container .download-btn:hover {
   background: var(--secondary);
+  color: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.4);
+  box-shadow: 0 6px 15px rgba(255, 165, 2, 0.4);
 }
 
-/* Mobile Responsiveness */
 @media only screen and (max-width: 700px) {
-  .lightbox-content {
-    width: 95%;
-  }
+  .lightbox-content { width: 95%; }
+}
+
+/* ========================== */
+/* ===== FILTER BUTTONS ===== */
+/* ========================== */
+.filter-buttons {
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem auto 1rem;
+}
+
+.filter-btn {
+  background: #f0f4f8;
+  border: 1px solid var(--accent);
+  color: var(--primary);
+  font-weight: 500;
+  border-radius: 25px;
+  padding: 0.5rem 1.2rem;
+  margin: 0.3rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(15, 76, 117, 0.1);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px rgba(15, 76, 117, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ========================== */
+/* ===== CAROUSEL STYLES ==== */
+/* ========================== */
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(15, 76, 117, 0.15);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+.carousel-buttons {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.carousel-buttons button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  margin: 0 5px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(15, 76, 117, 0.2);
+}
+
+.carousel-buttons button:hover {
+  background-color: var(--secondary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 165, 2, 0.3);
+}
+
+/* ========================== */
+/* ===== SCROLL ANIMATION === */
+/* ========================== */
+.scroll-effect {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.scroll-effect.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.fade-in { transform: translateY(20px); }
+.slide-in-left { transform: translateX(-50px); }
+.slide-in-right { transform: translateX(50px); }
+.slide-up { transform: translateY(50px); }
+
+/* ================================== */
+/* ===== CERT CARD LAYOUT FIXES ===== */
+/* ================================== */
+
+/* This section fixes the alignment of buttons inside the cards */
+.cert-card .info {
+  padding: 15px;
+  text-align: center;
+  /* Flex Properties to make the info box fill the card */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-card .info h3 {
+  font-size: 1.1em;
+  margin: 10px 0 5px;
+  color: var(--primary);
+}
+
+.cert-card .info p {
+  font-size: 0.9em;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+/* Pushes the buttons to the bottom of the info block */
+.cert-card .info .btn-container, 
+.cert-card .info a:last-child {
+  margin-top: auto;
+}
+
+/* Inner Links styling */
+.info a,
+.info .download {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 5px;
+  font-size: 0.85em;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.info a:hover,
+.info .download:hover {
+  background-color: var(--secondary);
+  color: white;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* ========================================= */
+/* CONTACT PAGE STYLES                       */
+/* ========================================= */
+.contact-page {
+  padding: 4rem 2rem auto 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-info-block {
+  margin-top: 1.5rem;
+  text-align: left;
+  font-size: 1rem;
+  /* Flex alignment merged here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-item {
+  text-align: center;
+}
+
+.contact-form {
+  margin-top: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  background-color: #fcfcfc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 8px rgba(15, 76, 117, 0.2);
+}
+
+.contact-form button {
+  background: var(--primary);
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(15, 76, 117, 0.2);
+}
+
+.contact-form button:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.map-container {
+  margin-top: 3rem;
+}
+
+.map-container h3 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.download-btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(15, 76, 117, 0.2);
+}
+
+.download-btn i {
+  margin-right: 8px;
+}
+
+.download-btn:hover {
+  background-color: var(--secondary);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 165, 2, 0.3);
 }
