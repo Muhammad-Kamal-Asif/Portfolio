@@ -42,3 +42,45 @@ if (carousel) {
   // Auto-play (Optional - 4 seconds)
   setInterval(window.nextSlide, 4000);
 }
+
+/* ========================================= */
+/* ===== TOUCH SWIPE SUPPORT FOR CAROUSEL == */
+/* ========================================= */
+
+// 1. Select the carousel element
+const carouselTrack = document.getElementById('carousel');
+
+// 2. Variables to track touch positions
+let touchStartX = 0;
+let touchEndX = 0;
+
+// 3. Listen for the "Touch Start" event
+carouselTrack.addEventListener('touchstart', (e) => {
+  // Record the X (horizontal) position where the finger first touches
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true }); // 'passive: true' improves scrolling performance
+
+// 4. Listen for the "Touch End" event
+carouselTrack.addEventListener('touchend', (e) => {
+  // Record the X position where the finger leaves the screen
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+}, { passive: true });
+
+// 5. Calculate direction and trigger slide
+function handleSwipe() {
+  const threshold = 50; // Minimum distance (px) to count as a swipe
+
+  // Calculate the difference
+  const swipeDistance = touchEndX - touchStartX;
+
+  // Check if it was a Left Swipe (User moves finger Right to Left -> Next Slide)
+  if (swipeDistance < -threshold) {
+    nextSlide();
+  }
+  
+  // Check if it was a Right Swipe (User moves finger Left to Right -> Prev Slide)
+  if (swipeDistance > threshold) {
+    prevSlide();
+  }
+}

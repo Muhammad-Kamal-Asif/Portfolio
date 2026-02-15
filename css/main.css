@@ -771,6 +771,15 @@ footer {
   box-shadow: 0 0.375rem 0.938rem rgba(255, 165, 2, 0.3);
 }
 
+.carousel-container {
+  /* ... your existing styles ... */
+  
+  /* NEW: Improves touch handling on mobile */
+  touch-action: pan-y; 
+  -webkit-user-select: none; /* Optional: prevents highlighting text while swiping */
+  user-select: none;
+}
+
 /* 12. RESPONSIVE MEDIA QUERIES */
 
 /* Tablets */
