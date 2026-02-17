@@ -55,52 +55,96 @@ ul {
   list-style: none;
 }
 
-/* 3. HEADER & NAVIGATION */
+/* ========================================= */
+/* 3. HEADER & NAVIGATION (UPGRADED)         */
+/* ========================================= */
+
 header.hero {
   background: linear-gradient(135deg, #0f4c75, #020c23); 
   color: white;
-  padding: 1.5rem 2rem 2rem 2rem;
+  padding: 2rem 0.5rem 1.5rem 0.5rem; /* More top padding for the nav */
   text-align: center;
-  border-radius: 0 0 3.125rem 3.125rem; /* 50px radius for a more pronounced curve */
+  border-radius: 0 0 3.125rem 3.125rem;
   box-shadow: var(--shadow-sm);
   position: relative;
   z-index: 100;
 }
 
+/* THE FLOATING GLASS NAV */
 nav {
-  display: flex;
+  display: inline-flex; /* Shrinks to fit content exactly */
   justify-content: center;
   align-items: center;
-  max-width: 75rem;
-  margin: 0 auto 2rem auto;
-  flex-wrap: wrap;
+  gap: 2rem; /* Spacing between links */
+  
+  /* Glassmorphism Magic */
+  background: rgba(255, 255, 255, 0.1); /* 10% opacity white */
+  backdrop-filter: blur(12px);           /* Blurs the gradient behind it */
+  -webkit-backdrop-filter: blur(12px);   /* Safari support */
+  
+  /* Shape & Borders */
+  padding: 0.5rem 2rem;                /* Plump padding */
+  border-radius: 50px;                   /* Perfect pill shape */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle diamond border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);   /* Soft drop shadow */
+  
+  margin: 0 auto 2.5rem auto;            /* Push content down */
 }
 
 nav a {
   color: #ffffff;
-  margin: 0 1rem;
-  font-weight: 600;
-  font-size: 1rem;
+  margin: 0; /* Margin handled by gap in nav */
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase; /* Makes it look more premium */
+  letter-spacing: 1px;       /* Adds breathing room to letters */
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.2rem 0;
+  opacity: 0.85;             /* Slightly transparent by default */
+  transition: all 0.3s ease;
 }
 
+/* Hover State: Bright white + Glow */
+nav a:hover {
+  opacity: 1;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Text Glow */
+}
+
+/* The Active/Hover Line (Glowing) */
 nav a::after {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: -0.25rem;
-  height: 0.125rem;
-  width: 100%;
-  background-color: var(--secondary);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  transform-origin: right;
+  left: 50%;
+  bottom: -4px;
+  height: 2px;
+  width: 0%;
+  background-color: var(--secondary); /* Gold */
+  box-shadow: 0 0 10px var(--secondary); /* Gold Glow */
+  transition: all 0.3s ease;
+  transform: translateX(-50%); /* Centers the animation */
 }
 
 nav a:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
+  width: 100%; /* Expands from center */
+}
+
+/* ========================================= */
+/* MOBILE NAV ADJUSTMENT                     */
+/* ========================================= */
+@media (max-width: 480px) {
+  nav {
+    display: flex;        /* Full width on mobile */
+    width: 100%;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 15px;  /* Less rounded on small screens to save space */
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  nav a {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
 }
 
 /* Hero Content */
@@ -780,37 +824,102 @@ footer {
   user-select: none;
 }
 
-/* 12. RESPONSIVE MEDIA QUERIES */
+/* ========================================= */
+/* MOBILE RESPONSIVENESS (MEDIA QUERIES)     */
+/* ========================================= */
 
-/* Tablets */
-@media (max-width: 48rem) {
-  .hero h1 { font-size: 2.2rem; }
-  section { padding: 3rem 1.5rem; }
-  nav a { margin: 0 0.5rem; font-size: 1rem; }
+/* Tablet & Smaller Laptops */
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 2rem; }
+  section { padding: 2rem 1.5rem; }
 }
 
-/* Mobile Phones */
-/* @media (max-width: 480px) {
+/* Mobile Devices (Max Width 768px) */
+@media (max-width: 768px) {
+  
+  /* Typography Scaling */
+  html { font-size: 15px; } /* Scales down all rem units slightly */
+  
   .hero {
-    padding: 1rem 0.5rem 2rem 0.5rem;
-    border-radius: 0 0 15px 15px;
+    padding: 2rem 1rem 3rem 1rem;
+    border-radius: 0 0 30px 30px; /* Reduce curve */
   }
 
-  .hero h1 { font-size: 0.9rem; }
-  .hero p.tagline { font-size: 0.5rem; }
-   
-  nav { gap: 0.25rem; }
-  nav a { font-size: 0.45rem; }
-   
-  .timeline-container { padding-left: 10px; }
-  .timeline-dot { width: 6px; height: 6px; left: -13.5px; }
-   
-  .long-text { display: none; }
-  .short-text { display: block; }
-   
-  .skill-icons img { width: 1.25rem; }
+  .hero h1 {
+    font-size: 1.8rem; /* Smaller heading */
+  }
+  
+  .hero p.tagline {
+    font-size: 0.9rem;
+  }
+
+  .hero-content img.c-avatar__img {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  /* Navigation: Stack or shrink */
+  nav a {
+    margin: 0 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* Layout Adjustments */
+  section {
+    padding: 2rem 1rem;
+  }
+  
+  section h2 {
+    font-size: 1.75rem;
+  }
+
+  /* Cards collapse to single column or smaller grid */
+  .pdf-grid, .gallery-grid, .cert-grid {
+    grid-template-columns: 1fr; /* Force single column on phones */
+    gap: 1.5rem;
+  }
+
+  /* Timeline */
+  .timeline-container {
+    padding-left: 1.5rem;
+  }
+  .timeline-dot {
+    left: -2.05rem; /* Adjust dot position for new padding */
+  }
+
+  /* Lightbox */
+  .lightbox-content {
+    width: 95%;
+  }
+  
+  .close-lightbox {
+    right: 1rem;
+    top: 1rem;
+  }
 }
 
-@media only screen and (max-width: 700px) {
-  .lightbox-content { width: 95%; }
-} */
+/* Small Phones (Max Width 480px) */
+@media (max-width: 480px) {
+  
+  /* Tighter Typography */
+  .hero h1 { font-size: 1.5rem; }
+  
+  /* Better Navigation Spacing */
+  nav { gap: 0.5rem; }
+  nav a { 
+    font-size: 0.85rem; 
+    margin: 0 0.3rem; 
+  }
+
+  /* Timeline adjustments */
+  .timeline-content h3 { font-size: 1.1rem; }
+  
+  /* Button sizing */
+  .btn-container {
+    gap: 0.5rem; /* Closer buttons */
+  }
+  
+  /* Utilities */
+  .long-text { display: none; }
+  .short-text { display: block; }
+}
