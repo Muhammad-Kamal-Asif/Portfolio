@@ -34,14 +34,22 @@
     <p class="scroll-effect fade-in">Explore my learning journey across diverse platforms</p>
   </header>
 
-  <section class="filter-buttons scroll-effect fade-in">
-  <button class="filter-btn active" data-filter="all">All Certificates</button>
-  <button class="filter-btn" data-filter="ai-data">AI & Data</button>
-  <button class="filter-btn" data-filter="programming">Programming</button>
-  <button class="filter-btn" data-filter="marketing">Marketing</button>
-  <button class="filter-btn" data-filter="finance">Finance & Excel</button>
-  <button class="filter-btn" data-filter="others">Academic & Soft Skills</button>
-</section>
+<div class="filter-wrapper scroll-effect fade-in">
+  
+  <button class="mobile-filter-toggle">
+    <i class="fa-solid fa-filter"></i> Filter Certificates ▾
+  </button>
+
+  <div class="filter-buttons" id="filterMenu">
+    <button class="filter-btn active" data-filter="all">All Certificates</button>
+    <button class="filter-btn" data-filter="ai-data">AI & Data</button>
+    <button class="filter-btn" data-filter="programming">Programming</button>
+    <button class="filter-btn" data-filter="marketing">Marketing</button>
+    <button class="filter-btn" data-filter="finance">Finance & Excel</button>
+    <button class="filter-btn" data-filter="others">Academic & Soft Skills</button>
+  </div>
+
+</div>
 
     <!-- certificates -->
 <section class="certifications">

@@ -134,16 +134,16 @@ nav a:hover::after {
 @media (max-width: 480px) {
   nav {
     display: flex;        /* Full width on mobile */
-    width: 100%;
+    width: 90%;
     gap: 1rem;
-    padding: 0.8rem 1rem;
-    border-radius: 15px;  /* Less rounded on small screens to save space */
+    padding: 0.5rem 0.8rem;
+    border-radius: 30px;  /* Less rounded on small screens to save space */
     background: rgba(255, 255, 255, 0.08);
   }
   
   nav a {
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
+    font-size: 0.5rem;
+    letter-spacing: 0.3px;
   }
 }
 
@@ -839,18 +839,29 @@ footer {
   
   /* Typography Scaling */
   html { font-size: 15px; } /* Scales down all rem units slightly */
-  
-  .hero {
-    padding: 2rem 1rem 3rem 1rem;
-    border-radius: 0 0 30px 30px; /* Reduce curve */
+
+  h1 {
+    font-size: 2rem; /* Smaller heading */
   }
 
-  .hero h1 {
-    font-size: 1.8rem; /* Smaller heading */
+  h2 {
+    font-size: 1.5rem; /* Smaller heading */
   }
-  
-  .hero p.tagline {
-    font-size: 0.9rem;
+
+  h3 {
+    font-size: 1rem; /* Smaller heading */
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  span {
+  font-size: 0.8rem;
+  }
+
+  section {
+    padding: 1rem 1rem;
   }
 
   .hero-content img.c-avatar__img {
@@ -860,17 +871,7 @@ footer {
 
   /* Navigation: Stack or shrink */
   nav a {
-    margin: 0 0.5rem;
-    font-size: 0.95rem;
-  }
-
-  /* Layout Adjustments */
-  section {
-    padding: 2rem 1rem;
-  }
-  
-  section h2 {
-    font-size: 1.75rem;
+    font-size: 0.8rem;
   }
 
   /* Cards collapse to single column or smaller grid */
@@ -882,6 +883,7 @@ footer {
   /* Timeline */
   .timeline-container {
     padding-left: 1.5rem;
+    margin-left: 0.2rem;
   }
   .timeline-dot {
     left: -2.05rem; /* Adjust dot position for new padding */
@@ -890,36 +892,105 @@ footer {
   /* Lightbox */
   .lightbox-content {
     width: 95%;
+    margin-top: 20vh;
   }
   
   .close-lightbox {
     right: 1rem;
     top: 1rem;
   }
+
+  /* 6. SKILLS SECTION */
+.skill-bars {
+  max-width: 26rem;
+  margin: 0 auto 3rem auto;
 }
 
-/* Small Phones (Max Width 480px) */
-@media (max-width: 480px) {
+.skill-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.skill-icons img {
+  width: 1.5rem;
+}
+
+}
+
+/* Default: Hide the toggle button on Desktop */
+.mobile-filter-toggle {
+  display: none; 
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
   
-  /* Tighter Typography */
-  .hero h1 { font-size: 1.5rem; }
-  
-  /* Better Navigation Spacing */
-  nav { gap: 0.5rem; }
-  nav a { 
-    font-size: 0.85rem; 
-    margin: 0 0.3rem; 
+  .filter-wrapper {
+    position: relative;
+    margin: 1.5rem auto;
+    width: 90%;
+    max-width: 300px;
+    z-index: 50; /* Ensure it floats above content when open */
   }
 
-  /* Timeline adjustments */
-  .timeline-content h3 { font-size: 1.1rem; }
-  
-  /* Button sizing */
-  .btn-container {
-    gap: 0.5rem; /* Closer buttons */
+  /* The "Filter Certificates" Bar */
+  .mobile-filter-toggle {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  
-  /* Utilities */
-  .long-text { display: none; }
-  .short-text { display: block; }
+
+  /* The Actual List (Hidden by default) */
+  .filter-buttons {
+    display: none; /* HIDDEN */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  /* When JS adds the 'show' class, display it */
+  .filter-buttons.show {
+    display: flex;
+  }
+
+  /* Style the buttons inside the dropdown */
+  .filter-btn {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--text-dark);
+    border: none;
+    padding: 12px;
+    box-shadow: none;
+  }
+
+  /* Active/Hover state inside dropdown */
+  .filter-btn:hover, .filter-btn.active {
+    background: #f0f4f8;
+    color: var(--primary);
+    border: none;
+    transform: none; /* Remove the "jump" effect */
+  }
 }
